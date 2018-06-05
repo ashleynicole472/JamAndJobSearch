@@ -4,9 +4,10 @@
     background-attachment: fixed;
     background-size: cover;
     color:white;
+    padding-bottom: 275px;
+    font-family: 'Lato', sans-serif !important;
 }
 
 .lead {
     color: #e6e4d3;
-    font-family: 'Lato', sans-serif;
 }
