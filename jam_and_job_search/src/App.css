@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .App-logo {
@@ -20,22 +21,6 @@
 
 .App-intro {
   font-size: large;
-}
-
-.navbar {
-  top: 0;
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  opacity: 0.8
-}
-
-.card {
-    max-width: 20rem;
-}
-
-.cards-center {
-    padding-left: 275px;
 }
 
 @keyframes App-logo-spin {

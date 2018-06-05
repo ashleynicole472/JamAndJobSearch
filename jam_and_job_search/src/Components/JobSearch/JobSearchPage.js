@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
-import classes from './Jobsearch.css';
+import './Jobsearch.css';
 
 class JobSearch extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            jobSearchInput: '',
+            locationSearchInput: ''
+        }
+        this.jobSearchHandlerChange = this.jobSearchHandlerChange.bind(this);
+        this.locationSearchHandlerChange = this.locationSearchHandlerChange.bind(this);
+    }
+
+    jobSearchHandlerChange = (event) => {
+        // console.log("Inside job search input");
+        this.setState({
+            jobSearchInput: event.target.value
+        })
+    }
+
+    locationSearchHandlerChange = (event) => {
+        // console.log("inside location");
+        this.setState({
+            locationSearchInput: event.target.value
+        })
+    }
+
+
     render(){
         return(
             <div className="classes">
@@ -18,8 +43,18 @@ class JobSearch extends Component {
                         </h3>
                         <div className="form-group">
                             <label className="col-form-label col-form-label-lg" for="inputLarge">Search for your next new career!</label>
-                            <input className="form-control form-control-lg" type="text" placeholder="Search Jobs" id="inputLarge" />
-                            <input className="form-control form-control-lg" type="text" placeholder="Search Location" id="inputLarge" />
+                            <input
+                                onChange={this.jobSearchHandlerChange}
+                                className="form-control form-control-lg"
+                                type="text"
+                                placeholder="Search Jobs"
+                                id="inputLarge" />
+                            <input
+                                onChange={this.locationSearchHandlerChange}
+                                className="form-control form-control-lg"
+                                type="text"
+                                placeholder="Search Location"
+                                id="inputLarge" />
                         </div>
                         <div className="row">
                             <div className="col-md-4">

@@ -1,0 +1,12 @@
+.classes {
+    background-image: url(./images/jobsearchbackground.jpg);
+    background-repeat: round;
+    background-attachment: fixed;
+    background-size: cover;
+    color:white;
+}
+
+.lead {
+    color: #e6e4d3;
+    font-family: 'Lato', sans-serif;
+}

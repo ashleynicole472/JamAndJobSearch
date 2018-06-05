@@ -1,0 +1,15 @@
+.navBar {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #00a5bb !important;
+}
+
+
+.navbar-brand {
+    color:#1a1762 !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
