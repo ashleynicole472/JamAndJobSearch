@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar.js';
+import JobSearch from './Components/JobSearch/JobSearchPage.js';
+import Cards from './Components/Cards.js';
 import './App.css';
 
 class App extends Component {
@@ -20,41 +22,8 @@ class App extends Component {
                 </div>
             </div>
         </div>
-        <div className="row cards-center">
-            <div className="col-sm-3">
-                <div className="card border-info mb-3">
-                    <div className="card-header">
-                        Header
-                    </div>
-                    <div className="card-body">
-                        <h4 className="card-title">Warning card title</h4>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="col-sm-3">
-                <div className="card border-info mb-3">
-                    <div className="card-header">
-                        Header
-                    </div>
-                    <div className="card-body">
-                        <h4 className="card-title">Warning card title</h4>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="col-sm-3">
-                <div className="card border-info mb-3">
-                    <div className="card-header">
-                        Header
-                    </div>
-                    <div className="card-body">
-                        <h4 className="card-title">Warning card title</h4>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Cards />
+        <JobSearch />
         <div className="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.
         </div>
       </div>

@@ -1,0 +1,10 @@
+.classes {
+    background-image: url(./images/jobsearchbackground.jpg);
+    color:white;
+}
+
+.form-group {
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
