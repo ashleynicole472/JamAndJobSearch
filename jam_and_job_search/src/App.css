@@ -22,6 +22,23 @@
   font-size: large;
 }
 
+.card {
+    max-width: 20rem;
+}
+
+.cards-center {
+    padding-left: 275px;
+}
+
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
