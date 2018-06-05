@@ -15,7 +15,7 @@ class BandsInTown extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <h2>Search Artist with Bands In Town</h2>
+                        <h2>Search Artist with Bands In Town<i class="far fa-hand-rock"></i></h2>
                     <div className="form-group">
                         <label className="col-form-label col-form-label-lg" for="inputLarge">Find when theyll be in your area!</label>
                         <input
@@ -39,7 +39,7 @@ class BandsInTown extends Component {
                     </div>
                 </div>
                     <div className="col-md-6">
-                        <h2>Search for music on Spotify</h2>
+                        <h2>Search for music on Spotify <i class="fab fa-spotify"></i></h2>
                         <div className="form-group">
                             <label className="col-form-label col-form-label-lg" for="inputLarge">Enjoy listening to your fav music while job searching!</label>
                             <input
