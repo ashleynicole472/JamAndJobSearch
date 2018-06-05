@@ -1,6 +1,13 @@
 .classes {
     background-image: url(./images/jobsearchbackground.jpg);
     color:white;
+    font-family: 'Overlock', cursive;
+    color: #e6e4d3;
+}
+
+.btn {
+    padding-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .form-group {

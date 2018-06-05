@@ -21,6 +21,15 @@ class JobSearch extends Component {
                             <input className="form-control form-control-lg" type="text" placeholder="Search Jobs" id="inputLarge" />
                             <input className="form-control form-control-lg" type="text" placeholder="Search Location" id="inputLarge" />
                         </div>
+                        <div className="row">
+                            <div className="col-md-4">
+                            </div>
+                            <div className="col-md-4">
+                                <button type="button" className="btn btn-info btn-md btn-block">Search</button>
+                            </div>
+                            <div className="col-md-4">
+                            </div>
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col-sm-12">
