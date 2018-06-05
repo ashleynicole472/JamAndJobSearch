@@ -11,7 +11,7 @@ class JobSearch extends Component {
                         Looking for more responsibility?
                         </h1>
                         <h2>
-                        Looking for an awesome new company to grow your career?
+                        Looking for an awesome new company to grow your career with?
                         </h2>
                         <h3>
                         Youve come to the right place!
@@ -25,7 +25,10 @@ class JobSearch extends Component {
                             <div className="col-md-4">
                             </div>
                             <div className="col-md-4">
-                                <button type="button" className="btn btn-info btn-md btn-block">Search</button>
+                                <button
+                                    type="button"
+                                    className="btn btn-info btn-md btn-block">Search
+                                </button>
                             </div>
                             <div className="col-md-4">
                             </div>

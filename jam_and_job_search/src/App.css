@@ -27,6 +27,7 @@
   z-index: 100;
   position: fixed;
   width: 100%;
+  opacity: 0.8
 }
 
 .card {
@@ -35,15 +36,6 @@
 
 .cards-center {
     padding-left: 275px;
-}
-
-.footer {
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
 }
 
 @keyframes App-logo-spin {
