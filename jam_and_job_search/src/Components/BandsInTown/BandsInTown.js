@@ -9,6 +9,14 @@ class BandsInTown extends Component {
             artistSearch: '',
             musicSearch: ''
         }
+        this.artistSearchInputHandlerChange = this.artistSearchInputHandlerChange.bind(this);
+    }
+
+    artistSearchInputHandlerChange = (event) => {
+        console.log("In artist seach");
+        this.setState({
+            artistSearch: event.target.value
+        })
     }
     render(){
         return(
@@ -19,7 +27,7 @@ class BandsInTown extends Component {
                     <div className="form-group">
                         <label className="col-form-label col-form-label-lg" for="inputLarge">Find when theyll be in your area!</label>
                         <input
-                            onChange={this.jobSearchHandlerChange}
+                            onChange={this.artistSearchInputHandlerChange}
                             className="form-control form-control-lg"
                             type="text"
                             placeholder="Search Artist Name"

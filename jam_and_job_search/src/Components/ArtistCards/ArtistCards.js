@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Cards.css';
+import './ArtistCards.css';
 import AUX from '../../hoc/AUX'
 
-class Cards extends Component {
+class ArtistCards extends Component {
     render(){
         return(
             <AUX>
@@ -63,4 +63,4 @@ class Cards extends Component {
     }
 }
 
-export default Cards;
+export default ArtistCards;

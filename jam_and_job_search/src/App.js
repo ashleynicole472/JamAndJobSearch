@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar/NavBar.js';
 import Jumbo from './Components/Jumbo/Jumbo.js';
-import Cards from './Components/Cards/Cards.js';
+import ArtistCards from './Components/ArtistCards/ArtistCards.js';
 import BandsInTown from './Components/BandsInTown/BandsInTown.js';
 import JobSearch from './Components/JobSearch/JobSearchPage.js';
 import Footer from './Components/Footer/Footer.js';
+import {
+  BrowserRouter as Router,
+  StaticRouter, // for server rendering
+  Route,
+  Switch,
+  Link
+  // etc.
+} from 'react-router-dom'
 import './App.css';
 
 class App extends Component {
@@ -13,7 +21,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Jumbo />
-        <Cards />
+        <ArtistCards />
         <BandsInTown />
         <JobSearch />
         <Footer />
