@@ -1,2 +1,2 @@
 # JamAndJobSearch
-Search for a new job while listening to music! Uses Indeed and Spotify API
+Search for a new job while listening to music! Uses Indeed, Bands In Town, and SoundCloud API
