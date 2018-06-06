@@ -7,15 +7,55 @@ class BandsInTown extends Component {
         super(props);
         this.state={
             artistSearch: '',
+            artistSearchResults: [],
             musicSearch: ''
         }
         this.artistSearchInputHandlerChange = this.artistSearchInputHandlerChange.bind(this);
+        this.bandsInTown = this.bandsInTown.bind(this);
     }
 
     artistSearchInputHandlerChange = (event) => {
         console.log("In artist seach");
         this.setState({
             artistSearch: event.target.value
+        })
+    }
+
+    bandsInTown = () => {
+        let { artistSearch } = this.state
+        let URL = `https://rest.bandsintown.com/artists/${this.state.artistSearch}/events?app_id=boo`
+
+        console.log("In bands in town button click");
+
+        fetch(URL)
+        .then((response) => {
+            return(
+                response.json()
+            )
+        })
+        .then((data) => {
+            console.log(data);
+            let artistResults = data.map((element) =>
+            <tr>
+                <td>{element.lineup}</td>
+                <td>{element.venue.city}</td>
+                <td>{element.venue.name}</td>
+                <td>{moment(element.datetime).format('llll')}</td>
+                <td>
+                <Button
+                    label="Tickets"
+                    className="btn btn-info btn-md btn-block"
+                    href={element.url} target="#">Buy Tickets Here</Button>
+                </td>
+            </tr>
+            )
+            this.setState({
+                artistSearchResults: artistResults
+            })
+        })
+        .catch((error) => {
+            console.log(error);
+            console.log("Sometin wong");
         })
     }
     render(){
@@ -38,6 +78,7 @@ class BandsInTown extends Component {
                         </div>
                         <div className="col-md-4">
                             <button
+                                onClick={this.bandsInTown}
                                 type="button"
                                 className="btn btn-info btn-md btn-block">Search
                             </button>
