@@ -10,7 +10,8 @@ class BandsInTown extends Component {
         this.state={
             artistSearch: '',
             artistSearchResults: [],
-            musicSearch: ''
+            musicSearch: '',
+            isDownloaded: false
         }
         this.artistSearchInputHandlerChange = this.artistSearchInputHandlerChange.bind(this);
         this.bandsInTown = this.bandsInTown.bind(this);
@@ -52,7 +53,8 @@ class BandsInTown extends Component {
             </tr>
         )
             this.setState({
-                artistSearchResults: artistInfo
+                artistSearchResults: artistInfo,
+                isDownloaded: true
             })
         })
         .catch((error) => {
@@ -82,6 +84,7 @@ class BandsInTown extends Component {
                                 type="button"
                                 className="btn btn-info btn-md btn-block">Search
                             </button>
+                            {this.state.isDownloaded ?
                             <table>
                                 <tbody>
                                     <tr className="table-primary">
@@ -93,7 +96,7 @@ class BandsInTown extends Component {
                                     </tr>
                                     {this.state.artistSearchResults}
                                 </tbody>
-                            </table>
+                            </table> : null}
                         </div>
                     </div>
                 </div>
