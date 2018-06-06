@@ -1,5 +1,7 @@
 //Key --> a09529b6105fb78af7eb531c1616a814
 import React, { Component } from 'react';
+import moment from 'moment';
+import { Button } from '../../bootstrap.min.css';
 import'./BandsInTown.css';
 
 class BandsInTown extends Component {
@@ -35,22 +37,22 @@ class BandsInTown extends Component {
         })
         .then((data) => {
             console.log(data);
-            let artistResults = data.map((element) =>
-            <tr>
+            const artistInfo = data.map((element) =>
+            <tr className="table-primary">
                 <td>{element.lineup}</td>
                 <td>{element.venue.city}</td>
                 <td>{element.venue.name}</td>
                 <td>{moment(element.datetime).format('llll')}</td>
                 <td>
-                <Button
-                    label="Tickets"
-                    className="btn btn-info btn-md btn-block"
-                    href={element.url} target="#">Buy Tickets Here</Button>
+                    <span className="badge badge-pill badge-info"
+                        type="button"
+                        href={element.url} target="#">Buy Tickets
+                    </span>
                 </td>
             </tr>
-            )
+        )
             this.setState({
-                artistSearchResults: artistResults
+                artistSearchResults: artistInfo
             })
         })
         .catch((error) => {
@@ -74,16 +76,24 @@ class BandsInTown extends Component {
                             id="inputLarge" />
                     </div>
                     <div className="row">
-                        <div className="col-md-4">
-                        </div>
-                        <div className="col-md-4">
+                        <div className="col-sm-12">
                             <button
                                 onClick={this.bandsInTown}
                                 type="button"
                                 className="btn btn-info btn-md btn-block">Search
                             </button>
-                        </div>
-                        <div className="col-md-4">
+                            <table>
+                                <tbody>
+                                    <tr className="table-primary">
+                                    <th scope="row">Artist</th>
+                                    <th scope="row">City</th>
+                                    <th scope="row">Venue</th>
+                                    <th scope="row">Date and Time</th>
+                                    <th scope="row">Tickets</th>
+                                    </tr>
+                                    {this.state.artistSearchResults}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
