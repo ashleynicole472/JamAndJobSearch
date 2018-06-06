@@ -39,17 +39,17 @@ class BandsInTown extends Component {
         .then((data) => {
             console.log(data);
             const artistInfo = data.map((element) =>
-            <tr className="table-primary" key={element.id}>
+            <tr className="table-light" key={element.id}>
                 <td>{element.lineup}</td>
                 <td>{element.venue.city}</td>
                 <td>{element.venue.name}</td>
                 <td>{moment(element.datetime).format('llll')}</td>
                 <td>
-                    <button
+                    <a href={element.url}
                         type="button"
                         className="btn btn-primary btn-sm"
-                        href={element.offers.url} target="#">Buy Tickets
-                    </button>
+                        target="#">Buy Tickets
+                    </a>
                 </td>
             </tr>
         )
@@ -89,7 +89,7 @@ class BandsInTown extends Component {
                             {this.state.isDownloaded ?
                                 <table>
                                     <tbody>
-                                        <tr className="table-primary">
+                                        <tr className="table-light">
                                         <th scope="row">Artist</th>
                                         <th scope="row">City</th>
                                         <th scope="row">Venue</th>
