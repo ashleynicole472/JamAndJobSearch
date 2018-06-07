@@ -1,5 +1,6 @@
 //Key --> a09529b6105fb78af7eb531c1616a814
 import React, { Component } from 'react';
+import Spotify from './Spotify'
 import moment from 'moment';
 import { Button } from '../../bootstrap.min.css';
 import'./BandsInTown.css';
@@ -66,65 +67,44 @@ class BandsInTown extends Component {
     render(){
         return(
             <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <h2 className="bandsintown">Search Artist with Bands In Town<i className="far fa-hand-rock"></i></h2>
-                    <div className="form-group">
-                        <label className="col-form-label col-form-label-lg" for="inputLarge">Find when theyll be in your area!</label>
-                        <input
-                            onChange={this.artistSearchInputHandlerChange}
-                            className="form-control form-control-lg"
-                            type="text"
-                            placeholder="Search Artist Name"
-                            id="inputLarge" />
-                    </div>
                     <div className="row">
-                        <div className="col-sm-12">
-                            <button
-                                onClick={this.bandsInTown}
-                                type="button"
-                                className="btn btn-info btn-md btn-block">Search
-                            </button>
-                            <div className="bands">
-                            {this.state.isDownloaded ?
-                                <table>
-                                    <tbody>
-                                        <tr className="table-light">
-                                        <th scope="row">Artist</th>
-                                        <th scope="row">City</th>
-                                        <th scope="row">Venue</th>
-                                        <th scope="row">Date and Time</th>
-                                        <th scope="row">Tickets</th>
-                                        </tr>
-                                        {this.state.artistSearchResults}
-                                    </tbody>
-                                </table> : null}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    <div className="col-md-6">
-                        <h2 className="spotify">Search for music on Spotify <i className="fab fa-spotify"></i></h2>
+                        <div className="col-md-6">
+                            <h2 className="bandsintown">Search Artist with Bands In Town<i className="far fa-hand-rock"></i></h2>
                         <div className="form-group">
-                            <label className="col-form-label col-form-label-lg" for="inputLarge">Enjoy listening to your fav music while job searching!</label>
+                            <label className="col-form-label col-form-label-lg" for="inputLarge">Find when theyll be in your area!</label>
                             <input
-                                onChange={this.jobSearchHandlerChange}
+                                onChange={this.artistSearchInputHandlerChange}
                                 className="form-control form-control-lg"
                                 type="text"
-                                placeholder="Search music"
+                                placeholder="Search Artist Name"
                                 id="inputLarge" />
                         </div>
                         <div className="row">
-
-                            <div className="col-md-12">
+                            <div className="col-sm-12">
                                 <button
+                                    onClick={this.bandsInTown}
                                     type="button"
                                     className="btn btn-info btn-md btn-block">Search
                                 </button>
+                                <div className="bands">
+                                {this.state.isDownloaded ?
+                                    <table>
+                                        <tbody>
+                                            <tr className="table-light">
+                                            <th scope="row">Artist</th>
+                                            <th scope="row">City</th>
+                                            <th scope="row">Venue</th>
+                                            <th scope="row">Date and Time</th>
+                                            <th scope="row">Tickets</th>
+                                            </tr>
+                                            {this.state.artistSearchResults}
+                                        </tbody>
+                                    </table> : null}
+                                </div>
                             </div>
-
                         </div>
                     </div>
+                    <Spotify />
                 </div>
             </div>
         )
