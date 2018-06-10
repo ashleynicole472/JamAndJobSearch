@@ -4,7 +4,6 @@ import AUX from '../../hoc/AUX';
 
 import ASAP  from './images/A$AP.jpg'
 import Bruno from './images/bruno.jpg'
-import BTS from './images/BTS.jpg'
 import Camila from './images/camilaCabello.jpg'
 import CardiB from './images/Cardi_B.jpg'
 import Childish from './images/childish.jpg'
@@ -30,7 +29,6 @@ class ArtistCards extends Component {
         var randomPictureArray = [
             ASAP,
             Bruno,
-            BTS,
             Camila,
             CardiB,
             Childish,
