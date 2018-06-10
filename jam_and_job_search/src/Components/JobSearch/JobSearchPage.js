@@ -6,26 +6,44 @@ class JobSearch extends Component {
         super(props)
         this.state={
             jobSearchInput: '',
-            locationSearchInput: ''
+            locationSearchInput: '',
+
         }
         this.jobSearchHandlerChange = this.jobSearchHandlerChange.bind(this);
         this.locationSearchHandlerChange = this.locationSearchHandlerChange.bind(this);
+        this.gitHubJobs = this.gitHubJobs.bind(this);
     }
 
     jobSearchHandlerChange = (event) => {
-        // console.log("Inside job search input");
+        console.log("Inside job search input");
         this.setState({
             jobSearchInput: event.target.value
         })
     }
 
     locationSearchHandlerChange = (event) => {
-        // console.log("inside location");
+        console.log("inside location");
         this.setState({
             locationSearchInput: event.target.value
         })
     }
 
+    gitHubJobs = () => {
+        console.log("in github");
+        let { jobSearchInput, locationSearchInput } = this.setState
+        let URL = `https://jobs.github.com/positions.json?description=${this.state.jobSearchInput}&location=${this.state.locationSearchInput}`
+
+        fetch(URL)
+        .then((response) => {
+            return (
+                response.json()
+            )
+        })
+        .catch((error) => {
+            console.log("Sometin wong");
+            console.log(error);
+        })
+    }
 
     render(){
         return(
@@ -53,7 +71,7 @@ class JobSearch extends Component {
                                 onChange={this.locationSearchHandlerChange}
                                 className="form-control form-control-lg"
                                 type="text"
-                                placeholder="Search Location"
+                                placeholder="Search City"
                                 id="inputLarge" />
                         </div>
                         <div className="row">
@@ -61,8 +79,9 @@ class JobSearch extends Component {
                             </div>
                             <div className="col-md-4">
                                 <button
+                                    onClick={this.gitHubJobs}
                                     type="button"
-                                    className="btn btn-info btn-md btn-block">Search
+                                    className="btn btn-info btn-md btn-block">Search <i className="fab fa-github"></i>
                                 </button>
                             </div>
                             <div className="col-md-4">
