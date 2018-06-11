@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 
-//spotify id=  9b2150a20ffc49d79ec19dcc4d8cf14d
-
 class Spotify extends Component {
     constructor(props){
+        const params = this.getHashParams();
         super(props)
         this.state={
 
         }
     }
+    getHashParams() {
+      var hashParams = {};
+      var e, r = /([^&;=]+)=?([^&;]*)/g,
+          q = window.location.hash.substring(1);
+      while ( e = r.exec(q)) {
+         hashParams[e[1]] = decodeURIComponent(e[2]);
+      }
+      return hashParams;
+    }
+
     render(){
         return(
             <div className="col-md-6">
                 <h2 className="spotify">Search for music on Spotify <i className="fab fa-spotify"></i></h2>
-                <button
+                <a href="http://localhost:8888"
                     type="button"
                     className="btn btn-info btn-md btn-block spotify-button">Log in with Spotify <i className="fab fa-spotify"></i>
-                </button>
+                </a>
                 <div className="form-group">
                     <label className="col-form-label col-form-label-lg" for="inputLarge">Enjoy listening to your fav music while job searching!</label>
                     <input
