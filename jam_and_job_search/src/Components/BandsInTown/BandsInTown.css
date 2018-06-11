@@ -1,4 +1,4 @@
-.flex-container {
+/* .flex-container {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -50,13 +50,17 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-    }
+    } */
 table {
     align-content: flex-start;
 }
 
 .spotify {
     color: #00ce6b;
+}
+
+.spotify-button {
+    background-color: #00ce6b !important;
 }
 
 .bandsintown {

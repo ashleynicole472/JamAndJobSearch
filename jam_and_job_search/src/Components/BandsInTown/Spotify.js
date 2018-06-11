@@ -13,6 +13,10 @@ class Spotify extends Component {
         return(
             <div className="col-md-6">
                 <h2 className="spotify">Search for music on Spotify <i className="fab fa-spotify"></i></h2>
+                <button
+                    type="button"
+                    className="btn btn-info btn-md btn-block spotify-button">Log in with Spotify <i className="fab fa-spotify"></i>
+                </button>
                 <div className="form-group">
                     <label className="col-form-label col-form-label-lg" for="inputLarge">Enjoy listening to your fav music while job searching!</label>
                     <input
