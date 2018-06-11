@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//spotify id=  9b2150a20ffc49d79ec19dcc4d8cf14d
+
 class Spotify extends Component {
     constructor(props){
         super(props)
@@ -28,13 +30,7 @@ class Spotify extends Component {
                             className="btn btn-info btn-md btn-block">Search
                         </button>
                     </div>
-                    <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameborder="no"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;{ ADD YOUR PARAMETERS HERE }">
-                    </iframe>
+
                 </div>
             </div>
         )
