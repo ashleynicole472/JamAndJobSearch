@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 
 class Spotify extends Component {
     constructor(props){
-        const params = this.getHashParams();
         super(props)
+        const params = this.getHashParams();
         this.state={
-
+            loggedIn: params.access_token ? true : false,
+            recentlyPlayed: []
         }
+        this.getHashParams = this.getHashParams.bind(this);
     }
     getHashParams() {
       var hashParams = {};
