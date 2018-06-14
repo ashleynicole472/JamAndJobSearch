@@ -61,7 +61,7 @@ class BandsInTown extends Component {
         })
         .catch((error) => {
             console.log(error);
-            console.log("Sometin wong");
+            console.log("Somethings wrong");
         })
     }
     render(){

@@ -30,7 +30,7 @@ class JobSearch extends Component {
 
     gitHubJobs = () => {
         console.log("in github");
-        let { jobSearchInput, locationSearchInput } = this.setState
+        let { jobSearchInput, locationSearchInput } = this.state
         let URL = `https://jobs.github.com/positions.json?description=${this.state.jobSearchInput}&location=${this.state.locationSearchInput}`
 
         fetch(URL)
