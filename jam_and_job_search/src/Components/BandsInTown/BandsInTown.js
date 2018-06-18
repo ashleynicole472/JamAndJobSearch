@@ -1,4 +1,3 @@
-//Key --> a09529b6105fb78af7eb531c1616a814
 import React, { Component } from 'react';
 import Spotify from './Spotify'
 import moment from 'moment';

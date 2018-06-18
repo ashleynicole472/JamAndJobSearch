@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './NavBar.css';
+
+const Home = () => (
+  <div>
+    <h2> Home </h2>
+  </div>
+);
+
+const JobSearch = () => (
+  <div>
+    <h2> JobSearch </h2>
+  </div>
+);
+
+const Jam = () => (
+  <div>
+    <h2> Jam </h2>
+  </div>
+);
 
 class NavBar extends Component {
     render(){
@@ -22,7 +40,7 @@ class NavBar extends Component {
                             <li className="nav-item">
                                 <Link
                                     className="nav-link"
-                                    to="/JobSearch">Jobs</Link>
+                                    to={`/JobSearch`}>Jobs</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Pricing</a>
