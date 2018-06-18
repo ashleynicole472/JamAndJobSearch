@@ -4,23 +4,7 @@ import JobSearch from '../JobSearch/JobSearchPage';
 import { Route, Link } from 'react-router-dom';
 import './NavBar.css';
 
-const Home = () => (
-  <div>
-    <h2> Home </h2>
-  </div>
-);
 
-const Jobsearch = () => (
-  <div>
-    <h2> JobSearch </h2>
-  </div>
-);
-
-const Jam = () => (
-  <div>
-    <h2> Jam </h2>
-  </div>
-);
 
 class NavBar extends Component {
     render(){
@@ -28,8 +12,11 @@ class NavBar extends Component {
             <div className="row">
                 <div className="col-lg-12 col-sm-12">
                     <nav className="navbar navBar navbar-expand-lg navbar-dark bg-primary">
-                        <a className="navbar-brand" href="#">Jam
-                            & Job Search</a>
+                        <Link
+                            className="navbar-brand"
+                            to="/">Jam
+                                & Job Search
+                        </Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>

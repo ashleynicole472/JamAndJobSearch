@@ -1,29 +1,40 @@
 .App {
   text-align: center;
   font-family: 'Lato', sans-serif;
+  background-repeat: round;
+  background-attachment: fixed;
+  background-size: cover;
+  color:white;
+  /* padding-bottom: 275px; */
+  font-family: 'Lato', sans-serif !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.navBar {
+  top: 0;
+  z-index: 100;
+  position: fixed !important;
+  width: 100%;
+  opacity: 0.9;
 }
 
-.App-header {
+
+.navbar-brand {
+    color:#1a1762 !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+/* .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
-}
+} */
 
-.App-title {
+/* .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+} */

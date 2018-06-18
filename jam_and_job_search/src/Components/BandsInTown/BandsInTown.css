@@ -2,6 +2,10 @@ table {
     align-content: flex-start;
 }
 
+.table-light {
+    color: #003844;
+}
+
 .spotify {
     color: #00ce6b;
 }
