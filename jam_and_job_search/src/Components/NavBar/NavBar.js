@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BandsInTown from '../BandsInTown/BandsInTown';
+import JobSearch from '../JobSearch/JobSearchPage';
 import { Route, Link } from 'react-router-dom';
 import './NavBar.css';
 
@@ -8,7 +10,7 @@ const Home = () => (
   </div>
 );
 
-const JobSearch = () => (
+const Jobsearch = () => (
   <div>
     <h2> JobSearch </h2>
   </div>
@@ -35,24 +37,30 @@ class NavBar extends Component {
                         <div className="collapse navbar-collapse" id="navbarColor01">
                           <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                <Link
+                                    className="nav-link"
+                                    to="/">Home
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <Link
                                     className="nav-link"
-                                    to={`/JobSearch`}>Jobs</Link>
+                                    to="/Jobsearch">Jobs</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <Link
+                                    className="nav-link"
+                                    to="/BandsInTown">Jam</Link>
                             </li>
                           </ul>
-                          <form className="form-inline my-2 my-lg-0">
+                        <Route path="/" component={Home}/>
+                        <Route path="/JobSearch" component={JobSearch}/>
+                        <Route path="/BandsInTown" component={BandsInTown}/>
+
+                        <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="text" placeholder="Search" />
                             <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                          </form>
+                        </form>
                         </div>
                     </nav>
                 </div>
