@@ -50,17 +50,17 @@ class JobSearch extends Component {
             <div className="classes">
                 <div className="row">
                     <div className="col-lg-12">
-                        <h1>
-                        Looking for more responsibility?
+                        <h1 className="jobh1">
+                            Looking for more responsibility?
                         </h1>
                         <h2>
-                        Looking for an awesome new company to grow your career with?
+                            Looking for an awesome new company to grow your career with?
                         </h2>
                         <h3>
-                        Youve come to the right place!
+                            Youve come to the right place!
                         </h3>
                         <div className="form-group">
-                            <label className="col-form-label col-form-label-lg" for="inputLarge">Search for your next new career!</label>
+                            <label className="col-form-label col-form-label-lg search" for="inputLarge">Search for your next new career!</label>
                             <input
                                 onChange={this.jobSearchHandlerChange}
                                 className="form-control form-control-lg"

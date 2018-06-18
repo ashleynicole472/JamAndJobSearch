@@ -2,7 +2,7 @@ table {
     align-content: flex-start;
 }
 
-.table-light {
+.table-light, label{
     color: #003844;
 }
 

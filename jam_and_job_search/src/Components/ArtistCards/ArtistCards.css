@@ -2,8 +2,8 @@
     max-width: 20rem;
 }
 
-h1 {
-    color: inherit;
+.h1tag {
+    color: #003844 !important;
 }
 
 .cards-center {

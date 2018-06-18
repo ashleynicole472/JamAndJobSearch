@@ -1,8 +1,7 @@
-.classes {
-    background-image: url(./images/jobsearchbackground.jpg);
-    color:white;
+.classes, .jobh1, .search{
+    color:white !important;
     font-family: 'Overlock', cursive;
-    color: #e6e4d3;
+    color: #e6e4d3 !important;
 }
 
 .btn {

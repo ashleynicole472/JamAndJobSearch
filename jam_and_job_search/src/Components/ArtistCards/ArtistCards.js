@@ -53,7 +53,7 @@ class ArtistCards extends Component {
             <AUX>
                 <div className="row">
                     <div className="col-md-12">
-                        <h1>Featured Artists</h1>
+                        <h1 className="h1tag">Featured Artists</h1>
                         <hr />
                     </div>
                 </div>
